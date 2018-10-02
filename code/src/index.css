@@ -1,5 +1,106 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans');
+
+*{
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+/* Header text */
+h1{
+  margin-left: 5%;
+}
+
+/* name */
+h3 {
+}
+
+/* prize */
+h5 {
+  line-height: 12px;
+  text-align: right;
+}
+
+/* deliveryTime */
+p {
+  font-size: 12px;
+  text-align: center;
+}
+
+/* size, type, substance, .numberInPack, numberInPack */
+ul{
+  list-style-image: url('./star_list.png');
+  justify-content: center;
+  align-items: center;
+}
+
+.productsContainer{
+  margin-left: 5%;
+  margin-right: 5%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+}
+
+.product{
+  padding: 10px 20px;
+  margin: 5px;
+  border: 1px solid silver;
+  width: calc(20% - 10px);
+  min-width: 162px;
+  min-height: 300px;
+  max-height: 480px;
+}
+
+.productInfo{
+  font-size: 12px;
+  text-align: left;
+  margin: 0px;
+}
+
+.productImage{
+  flex: 1 1;
+  object-fit: scale-down;
+  width: 100%;
+  max-height: 110px;
+}
+
+.piceBuyButton-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 30px;
+}
+
+.buyButton{
+  min-width: 30%;
+  background-color: #53bc97;
+  border-radius: 10px;
+  color: white;
+}
+
+/* -DESKTOP- */
+@media only screen and (min-width: 769px) and (max-width: 955px) {
+  .product{
+    width: calc(25% - 10px);
+  }
+}
+
+/* -tablet- */
+@media only screen and (min-width: 491px) and (max-width: 768px){
+  .product{
+    width: calc(50% - 10px);
+  }
+}
+
+/* -phone- */
+@media only screen and (min-width: 0px) and (max-width: 490px) {
+  .product{
+    width: calc(100% - 10px);
+  }
 }
